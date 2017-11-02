@@ -5,11 +5,11 @@ import java.util.List;
 
 import es.uji.asciiart.decorator.DuplicaHorizontal;
 import es.uji.asciiart.decorator.Marco;
-import es.uji.asciiart.domain.AsciiArt;
-import es.uji.asciiart.domain.Cuadrado;
-import es.uji.asciiart.domain.Triangulo;
+import es.uji.asciiart.domain.asciiart.AsciiArt;
+import es.uji.asciiart.domain.asciiart.Cuadrado;
+import es.uji.asciiart.domain.asciiart.Triangulo;
 
-public class Main {
+public class MainParte1 {
 
 	public static void main(String[] args) {
 		

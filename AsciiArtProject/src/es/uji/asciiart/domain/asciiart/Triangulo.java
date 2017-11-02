@@ -1,4 +1,4 @@
-package es.uji.asciiart.domain;
+package es.uji.asciiart.domain.asciiart;
 
 public class Triangulo extends AsciiArt{
 

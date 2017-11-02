@@ -1,6 +1,6 @@
 package es.uji.asciiart.decorator;
 
-import es.uji.asciiart.domain.AsciiArt;
+import es.uji.asciiart.domain.asciiart.AsciiArt;
 
 public class Marco extends AsciiArtDecorator{
 	
