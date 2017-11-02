@@ -1,56 +1,35 @@
 package es.uji.asciiart.adapter;
 
-import java.util.ArrayList;
 import es.uji.asciiart.domain.asciiart.AsciiArt;
 import es.uji.asciiart.domain.stringart.StringArt;
 
 public class StringArt2AsciiArt extends AsciiArt{
 	
 	private StringArt stringArt;
+	private final String separador;
 	
 	public StringArt2AsciiArt(StringArt str){
 		this.stringArt=str;
-		System.out.println();
+		String aux = str.dibujo();
+		this.separador=aux.substring(aux.length()-1);
 	}
 	
 	@Override
 	public String[] getLineas(){
-		String strDibujo = stringArt.dibujo();
-		ArrayList<String> lista = new ArrayList<String>();
-		String linea = "";
-		for(int i = 0; i<strDibujo.length(); i++){
-			linea += strDibujo.charAt(i);
-			if(linea.endsWith("\n") || linea.endsWith("\t")){
-				lista.add(linea.substring(0, linea.length()-2));
-				linea="";
-			}
-		}
-		
-		String[] listaResultante= new String[lista.size()];
-		for(int i = 0; i<lista.size();i++){
-			listaResultante[i]=lista.get(i);
-		}
-		
-		return listaResultante;
+		return stringArt.dibujo().split(separador);
 	}
 	
 	@Override
 	public int getAlto(){
-		return this.getLineas().length;
+		return stringArt.dibujo().split(separador).length;
 	}
 	
 	@Override
 	public int getAncho(){
-		String strDibujo = stringArt.dibujo();
-		int max = 0;
-		String linea="";
-		for(int i = 0; i<strDibujo.length(); i++){
-			linea += strDibujo.charAt(i);
-			if(linea.endsWith("\n") || linea.endsWith("\t")){
-				max=linea.length()>max?linea.length():max;
-				linea="";
-			}
-		}
+		String[] strList = stringArt.dibujo().split(separador);
+		int max=0;
+		for(String linea:strList)
+			max=linea.length()>max?linea.length():max;
 		return max;
 	}
 }
