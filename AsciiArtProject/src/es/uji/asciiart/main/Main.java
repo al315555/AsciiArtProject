@@ -18,7 +18,12 @@ public class Main {
 		cosas.add(new	Triangulo(5, 't'));	
 		
 		for	(AsciiArt cosa : cosas)	
-			dibuja(new	Marco(new	DuplicaHorizontal(cosa),	'·'));
+			dibuja(new Marco(
+					new DuplicaHorizontal(
+							new	Marco(
+									new	DuplicaHorizontal(cosa),	'·')
+							)
+					,'?'));
 //			dibuja(cosa);
 //			dibuja(new Marco(new Marco(cosa, '.'), '-'));
 			
@@ -28,5 +33,6 @@ public class Main {
 		for(String i: asciiArt.getLineas()) {
 			System.out.println(i);
 		}
+		System.out.println();
 	}
 }
