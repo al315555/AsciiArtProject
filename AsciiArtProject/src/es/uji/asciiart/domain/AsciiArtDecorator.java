@@ -12,4 +12,14 @@ public abstract class AsciiArtDecorator extends AsciiArt {
 	public String[] getLineas() {
 		return asciiArt.getLineas();
 	}
+	
+	@Override
+	public int getAncho() {
+		return asciiArt.getAncho();
+	}
+	
+	@Override
+	public int getAlto() {
+		return asciiArt.getAlto();
+	}
 }

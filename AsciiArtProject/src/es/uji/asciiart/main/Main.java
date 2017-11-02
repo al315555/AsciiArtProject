@@ -5,6 +5,7 @@ import java.util.List;
 
 import es.uji.asciiart.domain.AsciiArt;
 import es.uji.asciiart.domain.Cuadrado;
+import es.uji.asciiart.domain.DuplicaHorizontal;
 import es.uji.asciiart.domain.Marco;
 import es.uji.asciiart.domain.Triangulo;
 
@@ -17,9 +18,9 @@ public class Main {
 		cosas.add(new	Triangulo(5, 't'));	
 		
 		for	(AsciiArt cosa : cosas)	
-//			Dibuja(new	Marco(new	DuplicaHorizontal(cosa),	'·'));
+			dibuja(new	Marco(new	DuplicaHorizontal(cosa),	'·'));
 //			dibuja(cosa);
-			dibuja(new Marco(cosa, '.'));
+//			dibuja(new Marco(new Marco(cosa, '.'), '-'));
 			
 	}
 	

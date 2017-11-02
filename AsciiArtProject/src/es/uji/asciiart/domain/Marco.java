@@ -25,9 +25,20 @@ public class Marco extends AsciiArtDecorator{
 			for(int j=linea.length(); j<ancho; j++) {
 				lineasMarco[i] += " ";
 			}
+			lineasMarco[i]+=""+c;
 			i++;
 		}
 		lineasMarco[lineasMarco.length-1] = new String(new char[ancho+2]).replace("\0", ""+c);
 		return lineasMarco;
+	}
+	
+	@Override
+	public int getAncho() {
+		return super.getAncho()+2;
+	}
+	
+	@Override
+	public int getAlto() {
+		return super.getAlto() +2;
 	}
 }
