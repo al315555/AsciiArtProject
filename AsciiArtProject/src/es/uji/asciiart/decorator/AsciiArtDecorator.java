@@ -1,4 +1,6 @@
-package es.uji.asciiart.domain;
+package es.uji.asciiart.decorator;
+
+import es.uji.asciiart.domain.AsciiArt;
 
 public abstract class AsciiArtDecorator extends AsciiArt {
 

@@ -3,10 +3,10 @@ package es.uji.asciiart.main;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.uji.asciiart.decorator.DuplicaHorizontal;
+import es.uji.asciiart.decorator.Marco;
 import es.uji.asciiart.domain.AsciiArt;
 import es.uji.asciiart.domain.Cuadrado;
-import es.uji.asciiart.domain.DuplicaHorizontal;
-import es.uji.asciiart.domain.Marco;
 import es.uji.asciiart.domain.Triangulo;
 
 public class Main {
